@@ -1,0 +1,1 @@
+{"name":"Local: binarystrGame","url":"d:\\programing\\cpp_programs\\.vscode\\cppTasks\\day_27\\binarystrGame.cpp","tests":[{"id":1640170652641,"input":"3\n5\n10011\n2\n00\n5\n10101","output":"JJ\nJJ\nUttu"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\programing\\cpp_programs\\.vscode\\cppTasks\\day_27\\binarystrGame.cpp","group":"local","local":true}
