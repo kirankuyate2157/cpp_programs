@@ -1,0 +1,1 @@
+{"name":"Local: partionIt","url":"d:\\programing\\cpp _programs\\.vscode\\cppTasks\\day_28\\partionIt.cpp","tests":[{"id":1642502394361,"input":"3\n4 1\n4 2\n6 3","output":"Yes\n3\nYes\n4 2\nNo"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\programing\\cpp _programs\\.vscode\\cppTasks\\day_28\\partionIt.cpp","group":"local","local":true}
