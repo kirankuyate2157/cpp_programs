@@ -31,6 +31,7 @@ void merge(vector<int>& v, int l, int mid, int r)     //merging two array or vec
             j++;
         }
     }
+    
     while (i < n)
     {
         v[k] = first[i];
