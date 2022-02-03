@@ -19,14 +19,14 @@ int main(){
         ans=a+b;
     }
      else if(o=='-'){
-        ans+=a-b;
+        ans=a-b;
     }
     else if(o=='*'){
-        ans+=a*b;
+        ans=a*b;
     }else if(o=='/'){
-        ans+=a/b;
+        ans=a/b;
     }else if(o=='%'){
-        ans+=a%b;
+        ans=a%b;
     }
     else{
         cout<<" invalid input";

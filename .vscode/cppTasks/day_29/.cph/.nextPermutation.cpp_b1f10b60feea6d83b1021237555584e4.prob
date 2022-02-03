@@ -1,0 +1,1 @@
+{"name":"Local: nextPermutation","url":"d:\\programing\\cpp _programs\\.vscode\\cppTasks\\day_29\\nextPermutation.cpp","tests":[{"id":1643655979637,"input":"3\n2\n1 2\n3\n3 1 2\n3\n1 3 2","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\programing\\cpp _programs\\.vscode\\cppTasks\\day_29\\nextPermutation.cpp","group":"local","local":true}

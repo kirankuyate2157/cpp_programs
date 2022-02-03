@@ -17,10 +17,9 @@ void solve()
             // cout << i << "^" << x;
             int a = i ^ x;
             // cout << "=" << a << "  ";
-            if (a == 0 || a > 500000 || map[a] == 1)
+            if (a == 0|| map[a] == 1)
             {
-                if (a > 500000)
-                    cout << "...";
+            
                 i++;
                 continue;
             }

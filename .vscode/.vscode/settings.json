@@ -1,0 +1,12 @@
+{
+    "C_Cpp.errorSquiggles": "Disabled",
+    "files.associations": {
+        "iostream": "cpp",
+        "vector": "cpp",
+        "variant": "cpp"
+    },
+    "cSpell.words": [
+        "kosaraju",
+        "Matoshri"
+    ]
+}
