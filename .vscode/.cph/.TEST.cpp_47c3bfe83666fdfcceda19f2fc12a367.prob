@@ -1,1 +1,1 @@
-{"name":"Local: TEST","url":"d:\\programing\\cpp _programs\\.vscode\\TEST.cpp","tests":[],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\programing\\cpp _programs\\.vscode\\TEST.cpp","group":"local","local":true}
+{"name":"Local: TEST","url":"d:\\programing\\cpp _programs\\.vscode\\TEST.cpp","tests":[{"id":1644213622972,"input":"2\n2\n0 0\n3\n6 16 69","output":"-1\n1\n1 3"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\programing\\cpp _programs\\.vscode\\TEST.cpp","group":"local","local":true}

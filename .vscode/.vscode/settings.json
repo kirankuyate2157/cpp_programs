@@ -3,7 +3,9 @@
     "files.associations": {
         "iostream": "cpp",
         "vector": "cpp",
-        "variant": "cpp"
+        "variant": "cpp",
+        "span": "cpp",
+        "ostream": "cpp"
     },
     "cSpell.words": [
         "kosaraju",
