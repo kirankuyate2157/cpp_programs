@@ -15,6 +15,7 @@ bool isValidIP(string s)
     }
 //    long long int val =stoll(s);
 //     return val >= 0 and val <= 255;
+return true;
 }
 
 void IPaddres(string &s, vector<string> ans)

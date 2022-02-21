@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void dijakshtra(int src, int n,vector<pair<int, int>> adj[])
+void dijakshtra(int src, int n, vector<pair<int, int>> adj[])
 {
     int dist[n + 1];
     for (int i = 0; i < n; i++)
@@ -15,7 +15,7 @@ void dijakshtra(int src, int n,vector<pair<int, int>> adj[])
     // pq pair is going to to be store first: min_dist to reach node that is stored in second from src
     while (!pq.empty())
     {
-        pair<int.int>cur = pq.top();
+        pair<int.int> cur = pq.top();
         pq.pop();
         for (pair<int, int> nbrinfo : adj[cur.second])
         {
@@ -30,7 +30,7 @@ void dijakshtra(int src, int n,vector<pair<int, int>> adj[])
     }
     for (int i = 0; i <= n; i++)
     {
-        cout << i << " : " << dist[i]<< " , ";
+        cout << i << " : " << dist[i] << " , ";
     }
     cout << "\n";
 }
@@ -46,9 +46,9 @@ int main()
         cin >> v >> u >> w;
         adj[v].push_back({u, w});
         adj[u].push_back({v, w});
-int  src;
-cin>>src;
-dijakshtra(src,n,adj);
+        int src;
+        cin >> src;
+        dijakshtra(src, n, adj);
     }
     return 0;
 }
@@ -68,5 +68,5 @@ dijakshtra(src,n,adj);
 // }
 
 //  Variable	Value
-// p1	0x400684 "Name"
+// p1  "Name"
 // p2	0x0

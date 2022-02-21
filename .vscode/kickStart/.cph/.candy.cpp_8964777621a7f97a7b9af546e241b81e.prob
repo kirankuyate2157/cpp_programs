@@ -1,0 +1,1 @@
+{"name":"Local: candy","url":"d:\\programing\\cpp _programs\\.vscode\\kickStart\\candy.cpp","tests":[{"id":1644855227976,"input":"2\n7 3\n1 2 3 4 5 6 7\n5 10\n7 7 7 7 7","output":"1\n 5"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\programing\\cpp _programs\\.vscode\\kickStart\\candy.cpp","group":"local","local":true}
