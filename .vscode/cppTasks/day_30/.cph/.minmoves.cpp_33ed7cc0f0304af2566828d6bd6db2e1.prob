@@ -1,0 +1,1 @@
+{"name":"Local: minmoves","url":"d:\\programing\\cpp _programs\\.vscode\\cppTasks\\day_30\\minmoves.cpp","tests":[{"id":1646536477053,"input":"3\n1 3\n7 24\n10 1","output":"1\n2\n9"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\programing\\cpp _programs\\.vscode\\cppTasks\\day_30\\minmoves.cpp","group":"local","local":true}

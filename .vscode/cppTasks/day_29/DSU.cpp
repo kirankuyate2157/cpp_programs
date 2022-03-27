@@ -6,7 +6,6 @@ class DSU
 private:
     int *leader;
     int *Rank;
-
 public:
     DSU(int n)
     {

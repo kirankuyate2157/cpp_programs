@@ -66,7 +66,7 @@ int main()
     cout << "Enter the edges of your graph\n";
     for (int i = 0; i < e; i++)
     {
-        int u, v, w;
+        int u, v, w;i
         cin >> u >> v >> w;
         adj[u].push_back({v, w});
         adj[v].push_back({u, w});
