@@ -1,5 +1,12 @@
 #include <bits/stdc++.h>
 using namespace std;
+
+// Segmate Tree 
+//    - build tree 
+//    - query sum 
+//    - point update
+
+
 int build(int arr[], vector<int> &tree, int l, int r, int index)
 {
     if (l > r)

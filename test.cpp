@@ -1,9 +1,8 @@
 #include <bits/stdc++.h>
-#include<iostream>
+#include <iostream>
 using namespace std;
 class node
 {
-	
 
 public:
 	int seat;
@@ -67,14 +66,14 @@ public:
 			if (tab->seat == x && tab->status == "🟢")
 			{
 				cout << "\n\t\t  *Sorry !! \n"
-					 << "\t  ------------  seat " << x << "is alraedy booked            ------------\n";
+					 << "\t  ---------  seat " << x << "is alraedy booked      --------\n";
 				break;
 			}
 			if (tab->seat == x && tab->status != "🟢")
 			{
 				tab->status = "🟢";
 
-				cout << "\n\t  ------------  Your Seat " << x << " booked sucssesfully    ------------\n";
+				cout << "\n\t---------  Your Seat " << x << " booked sucssesfully  ---------\n";
 
 				break;
 			}
@@ -87,7 +86,8 @@ public:
 	void display()
 	{
 		node *temp = tab;
-		int t;cout<<"\t\t";
+		int t;
+		cout << "\t\t";
 		while (temp != NULL)
 		{
 			if (t % 10 == 0)
@@ -116,11 +116,11 @@ public:
 		{
 			if (temp->seat == x && temp->status == "🔴")
 			{
-				cout << "\n\t   ----------    Seat is already empty !! how can i cancel it  ----------\n";
+				cout << "\n\t-------  Seat is already empty !! how can i cancel it    -------\n";
 			}
 			else if (temp->seat == x && temp->status == "🟡")
 			{
-				cout << "\n\t   ----------   Seat is already canceled !! how can i cancel it  ----------\n";
+				cout << "\n\t-------  Seat is already canceled !! how can i cancel it  ------\n";
 			}
 			if (temp->seat == x && temp->status == "🟢")
 			{
@@ -133,28 +133,46 @@ public:
 
 int main()
 {
-	#ifndef ONLINE_JUDGE
-	freopen("input.txt", "r", stdin);
-	freopen("output.txt", "w", stdout);
-	#endif
+// #ifndef ONLINE_JUDGE
+// 	freopen("input.txt", "r", stdin);
+// 	freopen("output.txt", "w", stdout);
+// #endif
 	cinmax x;
-	bool flag=true;
+	bool flag = true;
+	int w = 1;
 	while (flag)
 	{
-		cout << "*\n\t-----------         Welcome to KK_cinmax        -----------\n ";
+		if (w == 10)
+		{
+			cout << "\ndo you want to continue... (n/Y)? \t";
+			int e;
+			cin >> e;
+			if (e == 'Y' || e == 'y')
+			{
+				w = 1;
+			}
+			else
+			{
+				flag = false;
+				continue;
+			}
+		}
+		cout << "*\n\t   ------    Welcome to KK_cinmax     -------\n ";
 		cout << "\t1.book ticket\n\t2.cancel ticket\n\t3.show seats\n\t4.exit\n";
-		int op;cout<<"\t_ _ _ ";
-		cin >> op;int z;
+		int op;
+		cout << "\t_ _ _ ";
+		cin >> op;
+		int z;
 		switch (op)
 		{
 		case 1:
-			
+
 			cout << "\tenter seat no  _ _ _  ";
 			cin >> z;
 			x.Sbook(z);
 			break;
 		case 2:
-			
+
 			cout << "\tenter seat no  _ _ _  ";
 			cin >> z;
 			x.cancel(z);
@@ -164,20 +182,20 @@ int main()
 			break;
 		case 4:
 			flag = false;
-			cout<<"\n\tThank for coming to Cinmax ,I hope you will enjoy it..\n";
-			cout<<"\t***********                             ***********\n";
-			cout<<"\t********                                  *********\n";
-			cout<<"\t*****                                        ******\n";
-			cout<<"\t***                                             ***\n";
-			cout<<"\t*                                                 *\n";
-			
+			cout << "\n\tThank for coming to Cinmax ,I hope you will enjoy it..\n";
+			cout << "\t***********                             ***********\n";
+			cout << "\t********                                  *********\n";
+			cout << "\t*****                                        ******\n";
+			cout << "\t***                                             ***\n";
+			cout << "\t*                                                 *\n";
+
 			break;
 		default:
 			cout << "\t please enter vallide input";
 			break;
 		}
+		w++;
 	}
 
-	
 	return 0;
 }
