@@ -1,0 +1,1 @@
+{"name":"Local: infiArea","url":"d:\\programing\\cpp _programs\\kickStart\\infiArea.cpp","tests":[{"id":1650756653487,"input":"2\n165 16800 23467\n5 2 5","output":"Case #1: 31.415927\nCase #2: 455.530935"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\programing\\cpp _programs\\kickStart\\infiArea.cpp","group":"local","local":true}
