@@ -1,201 +1,355 @@
 #include <bits/stdc++.h>
 #include <iostream>
+#include <conio.h>
+#include <string.h>
+
 using namespace std;
-class node
+bool login()
 {
+	char u[200] = "Admin", p[200] = "1234567";
+	char u2[200] = "kiran", p2[200] = "kiran";
+	char u1[200], p1[200];
+	cout << "\n\n\n\t\t\t\t\t Parking Reservation System Login";
+	cout << "\n\t*********************************************************************************************";
+	cout << "\n\t\t\t\t\t\tEnter Username: ";
+	cin >> u1;
+	cout << "\n\t\t\t\t\t\tEnter Password: ";
+	cin >> p1;
+	cout << "\n\t*********************************************************************************************";
 
-public:
-	int seat;
-	string status;
-	node *next;
-	node *prev;
-	node()
+	if ((strcmp(u, u1) == 0 && strcmp(p, p1) == 0) || strcmp(u2, u1) == 0 && strcmp(p2, p1) == 0)
 	{
-		seat = 0;
-		status = "🔴";
 
-		next = NULL;
-		prev = NULL;
+		cout << "\n\t.%%..%%..%%..%%..........%%%%%....%%%%...%%%%%...%%..%%..%%%%%%..%%..%%...%%%%..\n";
+		cout << "\t.%%.%%...%%.%%...........%%..%%..%%..%%..%%..%%..%%.%%.....%%....%%%.%%..%%.....\n";
+		cout << "\t.%%%%....%%%%............%%%%%...%%%%%%..%%%%%...%%%%......%%....%%.%%%..%%.%%%.\n";
+		cout << "\t.%%.%%...%%.%%...........%%......%%..%%..%%..%%..%%.%%.....%%....%%..%%..%%..%%.\n";
+		cout << "\t.%%..%%..%%..%%..........%%......%%..%%..%%..%%..%%..%%..%%%%%%..%%..%%...%%%%..\n";
+		cout << "\t................................................................................\n";
+
+		cout << "\n\t\t\t\t\t✅✅ Login is Successful";
+
+		cout << "\n\n\n--------------------------------🚗🚐🚎  WELCOME TO SMART VEHICLE PARKING SYSTEM 🚙🚚🚍------------------------------------";
+		cout << "\n";
+		cout << "\n\nMAXIMUM PARKING CAPACITY AND PARKING CHARGES W.R.T VEHICLE SPECIFICATION";
+		cout << "\n";
+		cout << "\n\1. Maximum car parking[100] , charge per car[50 rupees]";
+		cout << "\n\2. Maximum Truck parking[50] , Charge per Truck[100 rupees] ";
+		cout << "\n\3. Maximum Bicycle parking[120], Charge per Bicycle[20 rupees]";
+		cout << "\n\4. Maximum Rickshaw parking[20], Charges per Rickshaw[40]";
+		return true;
 	}
-	node(int seat, int v)
+	else
 	{
-		this->seat = seat;
-		if (v == 1)
-		{
-			status = "🟢";
-		}
-		else if (v == -1)
-		{
-			status = "🟡";
-		}
-		else
-		{
-			status = "🔴";
-		}
+		cout << "\n\n\t\t\t\tOooppssss !!! You have entered wrong Credentials! 🔴\t";
 
-		next = NULL;
-		prev = NULL;
+		return false;
+	}
+}
+string timeNow()
+{
+	string resTime = "";
+	time_t rawtime;
+	struct tm *timeinfo;
+	char buffer[80];
+
+	time(&rawtime);
+	timeinfo = localtime(&rawtime);
+
+	strftime(buffer, 80, " %I:%M%p", timeinfo);
+	resTime.append(buffer);
+	strftime(buffer, 80, " %d-%m-%Y", timeinfo);
+	resTime.append(buffer);
+	return resTime;
+}
+
+class id
+{
+public:
+	bool status = false;
+	string num = "-- ---";
+	string name = "--- --";
+	void takeDetail()
+	{
+		status = true;
+		cout << "\t\tplease fill free to share littlebit information !!\n";
+		cout << "\t\twhat's your name ?\n\t\t ... ";
+		cin >> name;
+		cout << "\t\tPhone No ?\n\t\t... ";
+		cin >> num;
 	}
 };
 
-class cinmax
+class slot
 {
+public:
+	bool status;
+	int charges;
+	string entryT;
+	float parkTime;
+	string exitT;
+	string UserName;
+	string plateNO;
+	string uid;
+	id ent;
 
-	node *tab = new node(1, 0);
-	int n = 50;
+	slot()
+	{
+		status = false;
+		entryT = "0:0:0";
+		exitT = "0:0:0";
+		parkTime = 0;
+		charges = 0;
+		UserName = "-------";
+		plateNO = "-------";
+		uid = " ----- ----- ";
+	}
+
+	void makeEntry(id x)
+	{
+		cout << "\n\t\tmake entry : ";
+		status = x.status;
+		cout << " please park time : ";
+		cin >> parkTime;
+		entryT = timeNow();
+		charges = parkTime * 50;
+		UserName = x.name;
+		cout << "\n\t\tenter Vehicle Plate number :\n\t\t... ";
+		cin >> plateNO;
+		uid = x.num;
+	}
+
+	void makeExit()
+	{
+		status = false;
+		entryT = "0:0:0";
+		exitT = "0:0:0";
+		charges = 0;
+		UserName = "-------";
+		plateNO = "-------";
+		uid = " ----- ----- ";
+	}
+	void showDetail()
+	{
+		cout << "\tUser Name : " << UserName << "\n";
+		cout << "\tUser id : " << uid << "\n";
+		cout << "\tStatus : ";
+		if (status == true)
+			cout << "Activated\n";
+		else
+			cout << "Deactivated\n";
+		cout << "\tEntry Time : " << entryT << "\n";
+		cout << "\tExit Time : " << exitT << "\n";
+		cout << "\tCharge : " << charges << "\n";
+		cout << "\tPlate No : " << plateNO << "\n";
+	}
+	void showExDetail()
+	{
+		exitT = timeNow();
+		cout << "\tUser Name : " << UserName << "\n";
+		cout << "\tUser id : " << uid << "\n";
+		cout << "\tStatus : ";
+		if (status == true)
+			cout << "Activated\n";
+		else
+			cout << "Deactivated\n";
+		cout << "\tEntry Time : " << entryT << "\n";
+		cout << "\tExit Time : " << exitT << "\n";
+		cout << "\tCharge : " << charges << "\n";
+		cout << "\tPlate No : " << plateNO << "\n";
+	}
+};
+
+class parkLon
+{
+private:
+	// vector < vector<slot> Area(16,vector<slot>(10);
+	slot Area[16][10];
+	int curentered = 0;
+	int tCnt = 0;
+	int earned = 0;
 
 public:
-	cinmax()
+	// while entering car
+	id veh;
+	void verify()
 	{
-		node *temp = tab;
-		int i = 2;
-		while (i <= n)
+		cout << "\n\t\tplease verify identity\n";
+
+		veh.takeDetail();
+	}
+	void enter()
+	{
+		bool isDone = false;
+		for (int i = 0; i < 16; i++)
 		{
-			node *ptr = new node(i++, 0);
-			temp->next = ptr;
-			ptr->prev = temp;
-			temp = temp->next;
+			if (isDone == true)
+				break;
+			for (int j = 0; j < 10; j++)
+			{
+				if (Area[i][j].status == false)
+				{
+					Area[i][j].makeEntry(veh);
+					cout << "\t\t take your slips >>>  \n";
+					isDone = true;
+					cout << "\n-----------------------------------------------------\n";
+					Area[i][j].showDetail();
+					cout << "\t\t done 👍 !";
+					cout << "\n-----------------------------------------------------\n";
+					curentered++;
+					tCnt++;
+					earned += Area[i][j].charges;
+					break;
+				}
+			}
 		}
 	}
 
-	void Sbook(int x)
+	void showpark()
 	{
-		node *temp = tab;
-		while (tab != NULL)
+		cout << "\n_____________________________________________________________\n";
+		for (int i = 0; i < 16; i++)
 		{
-			if (tab->seat == x && tab->status == "🟢")
-			{
-				cout << "\n\t\t  *Sorry !! \n"
-					 << "\t  ---------  seat " << x << "is alraedy booked      --------\n";
-				break;
-			}
-			if (tab->seat == x && tab->status != "🟢")
-			{
-				tab->status = "🟢";
-
-				cout << "\n\t---------  Your Seat " << x << " booked sucssesfully  ---------\n";
-
-				break;
-			}
-
-			tab = tab->next;
-		}
-		tab = temp;
-	}
-
-	void display()
-	{
-		node *temp = tab;
-		int t;
-		cout << "\t\t";
-		while (temp != NULL)
-		{
-			if (t % 10 == 0)
-			{
-				t = 0;
-				cout << "\n\t\t";
-			}
-			t++;
-
-			if (temp->seat < 10)
-			{
-				cout << "  " << temp->seat << temp->status << " ";
-			}
+			if (i == 2)
+				cout << " Enter --> ";
 			else
+				cout << "\t   ";
+			for (int j = 0; j < 10; j++)
 			{
-				cout << " " << temp->seat << temp->status << " ";
+				if (Area[i][j].status == true)
+					cout << "🟩 ";
+				else
+					cout << "🟧 ";
 			}
-			temp = temp->next;
+			cout << "\n";
+			if (i == 15)
+				cout << "\n<-- Exit\t\t\t\t\t\t Exit -->";
+		}
+		cout << "\n______________________________________________________________\n";
+	}
+
+	void exit()
+	{
+		bool isDoneE = false;
+		for (int i = 0; i < 16; i++)
+		{
+			if (isDoneE == true)
+				break;
+			for (int j = 0; j < 10; j++)
+			{
+				if (Area[i][j].status == true)
+				{
+					cout << "Host: " << Area[i][j].ent.name << "  user :" << veh.name << "\n";
+					Area[i][j].status = false;
+					cout << "\t\t take your slips >>>  \n";
+					isDoneE = true;
+					cout << "\n-----------------------------------------------------\n";
+					Area[i][j].showExDetail();
+					cout << "\t\t done 👍 !";
+					cout << "\n-----------------------------------------------------\n";
+					Area[i][j].makeExit();
+					curentered--;
+					break;
+				}
+			}
+		}
+		if (isDoneE == false)
+		{
+			isDoneE = true;
+			cout << "\n-----------------------------------------------------\n";
+			cout << "\tfor this name no entry exist ! ";
+			cout << "\n-----------------------------------------------------\n";
 		}
 	}
 
-	void cancel(int x)
+	void totalEars()
 	{
-		node *temp = tab;
-		while (temp != NULL)
-		{
-			if (temp->seat == x && temp->status == "🔴")
-			{
-				cout << "\n\t-------  Seat is already empty !! how can i cancel it    -------\n";
-			}
-			else if (temp->seat == x && temp->status == "🟡")
-			{
-				cout << "\n\t-------  Seat is already canceled !! how can i cancel it  ------\n";
-			}
-			if (temp->seat == x && temp->status == "🟢")
-			{
-				temp->status = "🟡";
-			}
-			temp = temp->next;
-		}
+		cout << "\n-----------------------*------------------------------\n";
+		cout << "\t\tCar lon Earning is " << earned;
+		cout << "\n-----------------------------------------------------\n";
+	}
+	void curEntry()
+	{
+		cout << "\n------------------------*-----------------------------\n";
+		cout << "\t\tcurrent vehicles  " << curentered << "  parked ";
+		cout << "\n-----------------------------------------------------\n";
 	}
 };
 
 int main()
 {
-// #ifndef ONLINE_JUDGE
-// 	freopen("input.txt", "r", stdin);
-// 	freopen("output.txt", "w", stdout);
-// #endif
-	cinmax x;
-	bool flag = true;
-	int w = 1;
-	while (flag)
+	bool start = false, access = true;
+	int t = 0;
+	while (!start && t < 5)
 	{
-		if (w == 10)
-		{
-			cout << "\ndo you want to continue... (n/Y)? \t";
-			int e;
-			cin >> e;
-			if (e == 'Y' || e == 'y')
-			{
-				w = 1;
-			}
-			else
-			{
-				flag = false;
-				continue;
-			}
-		}
-		cout << "*\n\t   ------    Welcome to KK_cinmax     -------\n ";
-		cout << "\t1.book ticket\n\t2.cancel ticket\n\t3.show seats\n\t4.exit\n";
-		int op;
-		cout << "\t_ _ _ ";
-		cin >> op;
-		int z;
-		switch (op)
-		{
-		case 1:
-
-			cout << "\tenter seat no  _ _ _  ";
-			cin >> z;
-			x.Sbook(z);
-			break;
-		case 2:
-
-			cout << "\tenter seat no  _ _ _  ";
-			cin >> z;
-			x.cancel(z);
-			break;
-		case 3:
-			x.display();
-			break;
-		case 4:
-			flag = false;
-			cout << "\n\tThank for coming to Cinmax ,I hope you will enjoy it..\n";
-			cout << "\t***********                             ***********\n";
-			cout << "\t********                                  *********\n";
-			cout << "\t*****                                        ******\n";
-			cout << "\t***                                             ***\n";
-			cout << "\t*                                                 *\n";
-
-			break;
-		default:
-			cout << "\t please enter vallide input";
-			break;
-		}
-		w++;
+		start = login();
+		t++;
 	}
+	if (!start)
+	{
+		cout << "\n\t\t__________________________________________________________________\n\n";
+		cout << "  \t\tAttempt of login failed or limit exceeded ! 🔴🔴🔴 \n";
+		access = false;
+		cout << "\t\t__________________________________________________________________\n";
+	}
+	if (access)
+	{
+		cout << "\n\n\t\t* KK SMART PARKING SYSTEM *\n";
+		parkLon A;
+		int ch, flg = 1;
+		while (flg)
+		{
+			cout << "\n\t\t\t  1. Arrival of a Car";
+			cout << "\n\t\t\t  2. Total no of cars Arrived";
+			cout << "\n\t\t\t  3. Total parking charges of all cars with details";
+			cout << "\n\t\t\t  4. Departure of the car";
+			cout << "\n\t\t\t  5. Show Parking";
+			cout << "\n\t\t\t  6. Stop system ";
+			cout << "\n\t\t.... ";
+			cin >> ch;
+			switch (ch)
+			{
+			case 1:
+			{
+				A.verify();
+				A.enter();
+				break;
+			}
+			case 2:
+			{
+				A.curEntry();
+				break;
+			}
+			case 3:
+			{
+				A.totalEars();
+				break;
+			}
+			case 4:
+			{
+				A.verify();
+				A.exit();
+				break;
+			}
+			case 5:
+			{
+				A.showpark();
+			}
+			case 6:
+			{
+				cout << "\n\t\twhile you stop all data will reset! confirm y/n ? ...  ";
+				char b;
+				cin >> b;
+				if (b == 'y' || b == 'Y')
+					flg = 0;
 
+				break;
+			}
+			default:
+				cout << "\t\tERROR please enter valid input !!\n";
+			}
+		}
+	}
 	return 0;
+	getch();
 }
