@@ -4,6 +4,7 @@
 #include <string.h>
 
 using namespace std;
+
 bool login()
 {
 	char u[200] = "Admin", p[200] = "1234567";
@@ -33,10 +34,10 @@ bool login()
 		cout << "\n";
 		cout << "\n\nMAXIMUM PARKING CAPACITY AND PARKING CHARGES W.R.T VEHICLE SPECIFICATION";
 		cout << "\n";
-		cout << "\n\1. Maximum car parking[100] , charge per car[50 rupees]";
-		cout << "\n\2. Maximum Truck parking[50] , Charge per Truck[100 rupees] ";
-		cout << "\n\3. Maximum Bicycle parking[120], Charge per Bicycle[20 rupees]";
-		cout << "\n\4. Maximum Rickshaw parking[20], Charges per Rickshaw[40]";
+		cout << "\n\1. Maximum car parking(100), charge per car 50₹";
+		cout << "\n\2. Maximum Truck parking(50) , Charge per Truck 100₹ ";
+		cout << "\n\3. Maximum Bicycle parking(120), Charge per Bicycle 20₹";
+		cout << "\n\4. Maximum Rickshaw parking(20), Charges per Rickshaw 40₹";
 		return true;
 	}
 	else
@@ -62,13 +63,34 @@ string timeNow()
 	resTime.append(buffer);
 	return resTime;
 }
-
+float vCharges(float time, int vType, )
+{
+	float tch = 0;
+	if (vType == 1)
+	{
+		tch += time * 20;
+	}
+	else if (vType == 2)
+	{
+		tch += time * 40;
+	}
+	else if (vType == 3)
+	{
+		tch += time * 50;
+	}
+	else if (vType == 4)
+	{
+		tch += time * 100;
+	}
+	return tch;
+}
 class id
 {
 public:
 	bool status = false;
 	string num = "-- ---";
 	string name = "--- --";
+	int vtype = 0;
 	void takeDetail()
 	{
 		status = true;
@@ -77,6 +99,8 @@ public:
 		cin >> name;
 		cout << "\t\tPhone No ?\n\t\t... ";
 		cin >> num;
+		cout << "\n\t\tvehicle type :\n\t\t\t1.Two wheeler bike.\n\t\t\t2.Three wheeler vehicles.\n\t\t\t3.Four wheeler vehicles(Car type).\n\t\t\t4.four and more wheeler vehicles(truck type).\n\t...";
+		cin >> vType;
 	}
 };
 
@@ -112,7 +136,7 @@ public:
 		cout << " please park time : ";
 		cin >> parkTime;
 		entryT = timeNow();
-		charges = parkTime * 50;
+		charges = vCharges(parkTime, x.vtype);
 		UserName = x.name;
 		cout << "\n\t\tenter Vehicle Plate number :\n\t\t... ";
 		cin >> plateNO;
@@ -140,7 +164,7 @@ public:
 			cout << "Deactivated\n";
 		cout << "\tEntry Time : " << entryT << "\n";
 		cout << "\tExit Time : " << exitT << "\n";
-		cout << "\tCharge : " << charges << "\n";
+		cout << "\tCharge : " << charges << "₹\n";
 		cout << "\tPlate No : " << plateNO << "\n";
 	}
 	void showExDetail()
@@ -155,7 +179,7 @@ public:
 			cout << "Deactivated\n";
 		cout << "\tEntry Time : " << entryT << "\n";
 		cout << "\tExit Time : " << exitT << "\n";
-		cout << "\tCharge : " << charges << "\n";
+		cout << "\tCharge : " << charges << "₹\n";
 		cout << "\tPlate No : " << plateNO << "\n";
 	}
 };

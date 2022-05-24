@@ -1,0 +1,1 @@
+{"name":"Local: passw","url":"d:\\programing\\cpp _programs\\kickStart\\passw.py","tests":[{"id":1653220302321,"input":"2\n7 \n1234567\n10 \n1111234567","output":"Case #1: 1234567aA&\nCase #2: 1111234567@Rc"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\programing\\cpp _programs\\kickStart\\passw.py","group":"local","local":true}

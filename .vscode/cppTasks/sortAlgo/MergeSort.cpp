@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void merge(vector<int> &v, int l, int mid, int r) // merging two array or vectores
+void merge(int v[], int l, int mid, int r) // merging two array or vectores
 {
     vector<int> first;             // first array part
     vector<int> second;            // second array part
@@ -45,36 +45,27 @@ void merge(vector<int> &v, int l, int mid, int r) // merging two array or vector
         k++;
     }
 }
-void mergeSort(vector<int> &v, int l, int r) // merging two part of vector of original vector
+void mergeSort(int arr[], int l, int r)
 {
-    if (l >= r) // if vector is empty or one size then  directolly return
-    {
+    if (l >= r)
         return;
-    }
-    int mid = (l + r) / 2;    /// finding mid index  point of vector
-    mergeSort(v, l, mid);     // giving first half  for merge sort
-    mergeSort(v, mid + 1, r); // giving secind half of the vector for the merge sort
-    merge(v, l, mid, r);      // and merging both half parts of vectore
+
+    int mid = (l + r) / 2;
+    mergeSort(arr, l, mid);
+    mergeSort(arr, mid + 1, r);
+    merge(arr, l, mid, r);
 }
 
 int main()
 {
-    vector<int> v = {7, 2, 8, 4, 5, 3, 9, 10, 11, 17}; // declaring vector
-    int n = v.size();                                  // size of vector
-
-    mergeSort(v, 0, n - 1);     // cal;ling merge sorting
-    for (int i = 0; i < n; i++) /// print ing vector
+    int arr[] = {4, 7, 12, 89, 12, 53, 313, 54, 6, 75, 75, 6646, 4, 64, 667, 313, 6};
+    int n = sizeof(arr) / sizeof(int);
+    cout << "Merging1";
+    mergeSort(arr, 0, n - 1);
+    for (int x : arr)
     {
-        cout << v[i] << " ";
+        cout << x << " ";
     }
+
     return 0;
 }
-
-/*
-
-Output  --->
-
-PS F:\Cpp_programes> cd "f:\Cpp_programes\.vscode\cppTasks\day_1\" ; if ($?) { g++ sortlist.cpp -o sortlist } ; if ($?) { .\sortlist }
-2 3 4 5 7 8 9 10 11 17
-
-*/

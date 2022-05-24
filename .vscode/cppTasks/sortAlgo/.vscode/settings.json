@@ -1,0 +1,7 @@
+{
+  "C_Cpp.errorSquiggles": "Disabled",
+  "cSpell.words": ["heapify", "inorder"],
+  "files.associations": {
+    "iostream": "cpp"
+  }
+}
