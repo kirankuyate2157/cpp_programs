@@ -1,0 +1,161 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class node
+{
+public:
+    char data;
+    node *left;
+    node *right;
+
+    node()
+    {
+        left = NULL;
+        right = NULL;
+    }
+    node(char data)
+    {
+        this->data = data;
+        left = NULL;
+        right = NULL;
+    }
+};
+class expTree
+{
+    stack<node *> st;
+    node ptr;
+    bool flg = false;
+
+public:
+    node *peek()
+    {
+        return st.top();
+    }
+    void insert(char x)
+    {
+        node *temp = new node(x);
+        if (isOperand(x))
+        {
+            st.push(temp);
+        }
+        else if (isOperator(x))
+        {
+            temp->left = st.top();
+            st.pop();
+            temp->right = st.top();
+            st.pop();
+            st.push(temp);
+        }
+        else
+        {
+            cout << "Error :expression in invalid!!  \n--->''" << x << "\n";
+        }
+    }
+    void Build(char x)
+    {
+        if (isOperand(x) && flg)
+        {
+            node *second = new node(x);
+            node *temp = new node(st.top()->data);
+            st.pop();
+            temp->left = st.top();
+            temp->right = second;
+            st.pop();
+            st.push(temp);
+            flg = false;
+        }
+        else if (isOperand(x) && !flg)
+        {
+            node *temp = new node(x);
+            st.push(temp);
+        }
+        else if (isOperator(x))
+        {
+            node *temp = new node(x);
+            st.push(temp);
+            flg = true;
+        }
+        else
+        {
+            cout << "Error: Invalid expression \n--->" << x << "\n";
+        }
+    }
+    bool isOperand(char x)
+    {
+        if ((x >= 'a' && x <= 'z') || (x >= 'A' || x >= 'Z') || (x >= '0' && x <= '9'))
+            return true;
+        return false;
+    }
+    bool isOperator(char x)
+    {
+        if (x == '+' || x == '-' || x == '*' || x == '/')
+            return true;
+        return false;
+    }
+    void preBuild(string s)
+    {
+        for (int i = s.length() - 1; i >= 0; i--)
+        {
+            insert(s[i]);
+        }
+    }
+    void postBuild(string s)
+    {
+        for (int i = 0; i < s.length(); i++)
+        {
+            insert(s[i]);
+        }
+    }
+    void build(string s)
+    {
+        for (int i = 0; i < s.length(); i++)
+        {
+            Build(s[i]);
+        }
+    }
+    void postorder(node *temp)
+    {
+        if (temp != NULL)
+        {
+            postorder(temp->left);
+            postorder(temp->right);
+            cout << temp->data << " ";
+        }
+    }
+    void Inorder(node *temp)
+    {
+        if (temp != NULL)
+        {
+            Inorder(temp->left);
+            cout << temp->data << " ";
+            Inorder(temp->right);
+        }
+    }
+    void preorder(node *temp)
+    {
+        if (temp != NULL)
+        {
+            cout << temp->data << " ";
+            preorder(temp->left);
+            preorder(temp->right);
+        }
+    }
+};
+// -a+b-d*e/fg
+// (a - b) + (d - (e * (f / g)))
+// ->
+// a b d e f g / * - + -
+// a - b + d - e * f / g
+// - a + b - d * e / f g
+int main()
+{
+    expTree a;
+    a.build("a-b+d-e*f/g");
+
+    a.postorder(a.peek());
+    cout << "\n";
+    a.Inorder(a.peek());
+    cout << "\n";
+    a.preorder(a.peek());
+    return 0;
+}
