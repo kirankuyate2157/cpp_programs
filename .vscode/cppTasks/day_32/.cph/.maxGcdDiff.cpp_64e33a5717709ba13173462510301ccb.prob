@@ -1,0 +1,1 @@
+{"name":"Local: maxGcdDiff","url":"d:\\programing\\cpp _programs\\.vscode\\cppTasks\\day_32\\maxGcdDiff.cpp","tests":[{"id":1658644794565,"input":"3\n5 6\n2 8\n10 89","output":"6 6\n8 2\n11 88"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\programing\\cpp _programs\\.vscode\\cppTasks\\day_32\\maxGcdDiff.cpp","group":"local","local":true}

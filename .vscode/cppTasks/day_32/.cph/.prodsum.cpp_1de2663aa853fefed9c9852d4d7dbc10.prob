@@ -1,0 +1,1 @@
+{"name":"Local: prodsum","url":"d:\\programing\\cpp _programs\\.vscode\\cppTasks\\day_32\\prodsum.cpp","tests":[{"id":1658585857671,"input":"4\n3\n1 0 1\n1\n0\n2\n1 1\n4\n1 1 0 1","output":"2\n0\n3\n4"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\programing\\cpp _programs\\.vscode\\cppTasks\\day_32\\prodsum.cpp","group":"local","local":true}

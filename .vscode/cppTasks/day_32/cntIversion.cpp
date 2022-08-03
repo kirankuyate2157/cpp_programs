@@ -50,6 +50,7 @@ int main()
 {
     vector<int> arr = {5, 3, 2, 1, 4};
     cout << merge_Sort(arr, 0, arr.size() - 1);
-
+    for (auto x : arr)
+        cout << x << " ";
     return 0;
 }

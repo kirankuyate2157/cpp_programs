@@ -1,8 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-void merge(vector<int> &v, int l, int mid, int r) // merging two array or vectores
+int merge(vector<int> &v, int l, int mid, int r) // merging two array or vectores
 {
+    int c = 0;
     vector<int> first;             // first array part
     vector<int> second;            // second array part
     for (int i = l; i <= mid; i++) // Inserting first  half elment from origiunal vectore
@@ -23,6 +24,7 @@ void merge(vector<int> &v, int l, int mid, int r) // merging two array or vector
             v[k] = first[i];
             i++;
             k++;
+            c++;
         }
         else
         {
@@ -44,26 +46,29 @@ void merge(vector<int> &v, int l, int mid, int r) // merging two array or vector
         j++;
         k++;
     }
+    return c;
 }
-void mergeSort(vector<int> &v, int l, int r) // merging two part of vector of original vector
+int mergeSort(vector<int> &v, int l, int r) // merging two part of vector of original vector
 {
+    int c = 0;
     if (l >= r) // if vector is empty or one size then  directolly return
     {
-        return;
+        return 0;
     }
-    int mid = (l + r) / 2;    /// finding mid index  point of vector
-    mergeSort(v, l, mid);     // giving first half  for merge sort
-    mergeSort(v, mid + 1, r); // giving secind half of the vector for the merge sort
-    merge(v, l, mid, r);      // and merging both half parts of vectore
+    int mid = (l + r) / 2;         /// finding mid index  point of vector
+    c += mergeSort(v, l, mid);     // giving first half  for merge sort
+    c += mergeSort(v, mid + 1, r); // giving secind half of the vector for the merge sort
+    c += merge(v, l, mid, r);
+    return c; // and merging both half parts of vectore
 }
 
 int main()
 {
-    vector<int> v = {7, 2, 8, 4, 5, 3, 9, 10, 11, 17}; // declaring vector
-    int n = v.size();                                  // size of vector
+    vector<int> v = {5, 3, 2, 1, 4}; // declaring vector
+    int n = v.size();                // size of vector
 
-    mergeSort(v, 0, n - 1);     // cal;ling merge sorting
-    for (int i = 0; i < n; i++) /// print ing vector
+    cout << mergeSort(v, 0, n - 1) << " \n"; // cal;ling merge sorting
+    for (int i = 0; i < n; i++)              /// print ing vector
     {
         cout << v[i] << " ";
     }

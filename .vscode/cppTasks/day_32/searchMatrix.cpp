@@ -3,6 +3,8 @@ using namespace std;
 bool ispresent(vector<vector<int>> &arr, int x)
 {
     int n = arr.size();
+    if (n == 0)
+        return false;
     int m = arr[0].size();
     int l = 0;
     int r = n * m - 1;
