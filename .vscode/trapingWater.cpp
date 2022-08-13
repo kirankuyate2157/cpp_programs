@@ -9,14 +9,15 @@ int trappingWater(int arr[], int n)
     {
         left[i] = max(left[i - 1], arr[i]);
     }
-    for (int i = n -1; i >= n; i--)
+    right[n - 1] = arr[n - 1];
+    for (int i = n - 2; i >= 0; i--)
     {
-        right[i] = min(right[i -1], arr[i]);
+        right[i] = max(right[i + 1], arr[i]);
     }
     int sum = 0;
     for (int i = 0; i < n; i++)
     {
-        sum += min(right[i], left[i]-arr[i]);
+        sum += min(right[i], left[i] - arr[i]);
     }
     return sum;
 }
@@ -24,10 +25,10 @@ int trappingWater(int arr[], int n)
 int main()
 {
     int arr[] = {3, 0, 0, 2, 0, 4};
-    int n =sizeof(arr)/sizeof(int);
+    int n = sizeof(arr) / sizeof(int);
     // cout<<n<<":";
 
-   cout<<"water storing capacity is  _";
-    cout<<trappingWater(arr, n) <<"_   liters";
+    cout << "water storing capacity is  _";
+    cout << trappingWater(arr, n) << "_   liters";
     return 0;
 }
