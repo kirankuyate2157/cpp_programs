@@ -1,0 +1,1 @@
+{"name":"Local: crazy","url":"d:\\programing\\cpp _programs\\.vscode\\cppTasks\\day_33\\crazy.cpp","tests":[{"id":1660471890793,"input":"4\n101\n1010\n0000\n0001","output":"101\n11\n0000\n01"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\programing\\cpp _programs\\.vscode\\cppTasks\\day_33\\crazy.cpp","group":"local","local":true}
