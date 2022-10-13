@@ -1,0 +1,1 @@
+{"name":"Local: SortFabric","url":"d:\\programing\\cpp _programs\\kickStart\\SortFabric.cpp","tests":[{"id":1663521475499,"input":"3\n2\nblue 2 1\nyellow 1 2\n2\nblue 2 1\nbrown 2 2\n1\nred 1 1\n","output":""}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"d:\\programing\\cpp _programs\\kickStart\\SortFabric.cpp","group":"local","local":true}
