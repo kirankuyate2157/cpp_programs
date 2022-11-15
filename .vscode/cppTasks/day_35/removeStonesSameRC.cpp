@@ -35,54 +35,36 @@ public:
 
     void unionR(int u, int v)
     {
-
         int ulp_u = findUParent(u);
-
         int ulp_v = findUParent(v);
-
         if (ulp_u == ulp_v)
             return;
-
         if (rank[ulp_u] < rank[ulp_v])
-
             parent[ulp_u] = ulp_v;
-
         else if (rank[ulp_v] < rank[ulp_u])
-
             parent[ulp_v] = ulp_u;
-
         else
         {
-
             parent[ulp_v] = ulp_u;
-
             rank[ulp_u]++;
         }
     }
 
     void unionS(int u, int v)
     {
-
         int ulp_u = findUParent(u);
-
         int ulp_v = findUParent(v);
-
         if (ulp_u == ulp_v)
             return;
 
         if (size[ulp_u] > size[ulp_v])
         {
-
             parent[ulp_v] = ulp_u;
-
             size[ulp_u] += size[ulp_v];
         }
-
         else
         {
-
             parent[ulp_u] = ulp_v;
-
             size[ulp_v] += size[ulp_u];
         }
     }
