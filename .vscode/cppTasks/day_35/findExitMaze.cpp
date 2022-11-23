@@ -50,43 +50,43 @@ public:
     }
 };
 
-void dfs(vector<vector<char>> maze, int m, int n, vector<vector<int>> &dp, vector<int> &entrance)
-{
-    queue<pair<int, int>> q;
-    vector<vector<int>> dir = {{1, 0}, {0, 1}, {-1, 0}, {0, -1}};
-    q.push(make_pair(entrance[0], entrance[1]));
-    int path = 0;
-    while (!queue.empty())
-    {
-        auto person = q.top();
-        q.pop();
-        int i = person[0];
-        int j = person[1];
-        for (int k = 0; k < 4; k++)
-        {
-            int x = i + dir[k][0];
-            int y = j + dir[k][1];
-
-            if (maze[x][y] == '-' && i > 0 || i < n || j > 0 || j < m)
-            {
-                path++;
-                q.push({x, y});
-            }
-            if ((i <= 0 || i >= n || j <= 0 || j >= m) && maze[x][y] == '+')
-            {
-                ans = max(ans, path);
-            }
-        }
-    }
-}
-
-int nearestExit(vector<vector<char>> &maze, vector<int> &entrance)
+int nearestExit2(vector<vector<char>> &maze, vector<int> &entrance)
 {
     int n = maze.size();
     int m = maze[0].size();
-    vector<vector<int>> dp(n, vector<int>(m, -1));
-    dfs(maze, n, m, dp, entrance);
-    return ans;
+    queue<pair<int, int>> q;
+    vector<vector<int>> dir = {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+
+    q.push({entrance[0], entrance[1]});
+    int path = 0;
+    while (!q.empty())
+    {
+        int size = q.size();
+        path++;
+        for (int k = 0; k < size; k++)
+        {
+            auto [i, j] = q.front();
+            q.pop();
+            for (int l = 0; l < 4; l++)
+            {
+                int x = i + dir[l][0];
+                int y = j + dir[l][1];
+
+                if (x >= 0 && y >= 0 && x < n && y < m)
+                {
+                    if (maze[x][y] == '+')
+                        continue;
+                    if (x == 0 || y == 0 || x == n - 1 || y == m - 1)
+                    {
+                        return path;
+                    }
+                    q.push({x, y});
+                    maze[x][y] = '+';
+                }
+            }
+        }
+    }
+    return -1;
 }
 
 int main()
