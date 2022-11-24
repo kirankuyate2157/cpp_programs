@@ -94,7 +94,6 @@ int main()
                                 {'.', '.', '.', '4', '1', '9', '.', '.', '5'},
                                 {'.', '.', '.', '.', '8', '.', '.', '7', '9'}};
 
-    cout << "sudoku is valid" << endl;
     Solution obj;
     int x = obj.isValidSudoku(box);
     if (x)
