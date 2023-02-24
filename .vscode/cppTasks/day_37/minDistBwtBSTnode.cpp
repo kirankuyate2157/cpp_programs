@@ -11,7 +11,6 @@ struct TreeNode
     TreeNode(int x) : val(x), left(nullptr), right(nullptr) {}
     TreeNode(int x, TreeNode *left, TreeNode *right) : val(x), left(left), right(right) {}
 };
-
 TreeNode *createBST(vector<int> &root)
 {
     if (root.size() == 0)
@@ -53,7 +52,6 @@ TreeNode *createBST(vector<int> &root)
             }
         }
     }
-
     return rootNode;
 }
 
