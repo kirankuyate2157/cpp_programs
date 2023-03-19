@@ -1,3 +1,4 @@
+
 #include <bits/stdc++.h>
 using namespace std;
 class Solution
@@ -18,12 +19,10 @@ public:
         return l + k;
     }
 };
-// 0 1 2 3 4 5 6 7 8 9 10
-//   2 3 4 7 11
 int main()
 {
     vector<int> arr = {2, 3, 4, 7, 11};
     Solution obj;
-    cout << "Missing Number is  : " << obj.findKthPositive(arr, 5);
+    cout << "Missing Number is:" << obj.findKthPositive(arr, 5);
     return 0;
 }
