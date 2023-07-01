@@ -1,0 +1,137 @@
+Section: DP Beginner
+Resources:
+    - Lecture Slides 1.1 Dynamic Programming | 10-04-2023 : https://drive.google.com/file/d/1ulcycud_rHLC4EJf9dHmONSvOuf4V5lD/view
+    - Feedback Form DP 1.1: https://forms.gle/5acufGLWxDRHXhER8
+    - Lecture Slides 1.2 Dynamic Programming | 13-04-2023 : https://drive.google.com/file/d/1OHX1miM1yo6RiKF3EtzOdCilCzWc5vzb/view
+    - Feedback Form DP 1.2: https://forms.gle/HscogW5hFFxKu8ka8
+Tasks:
+    - Task 1: https://cses.fi/problemset/task/1633
+    - Task 2: https://cses.fi/problemset/task/1634
+    - Task 3: https://cses.fi/problemset/task/1635
+    - Task 4: https://codeforces.com/problemset/problem/1350/B
+    - Task 5: https://cses.fi/problemset/task/1636
+    - Task 6: https://cses.fi/problemset/task/1637
+    - Task 7: https://cses.fi/problemset/task/1638
+    - Task 8: https://codeforces.com/problemset/problem/455/A
+    - Task 9: https://atcoder.jp/contests/dp/tasks/dp_e
+    - Task 10: https://cses.fi/problemset/task/1158
+    - Task 11: https://codeforces.com/problemset/problem/1288/C
+    - Task 12: https://cses.fi/problemset/task/1745
+    - Task 13: https://atcoder.jp/contests/dp/tasks/dp_m
+    - Task 14: https://codeforces.com/problemset/problem/166/E
+    - Task 15: https://cses.fi/problemset/task/1140
+    - Task 16: https://cses.fi/problemset/task/1639
+    - Task 17: https://atcoder.jp/contests/dp/tasks/dp_i
+
+Section: DP Intermediate
+Resources:
+    - Lecture Slides DP 2.1 16-04-2023 TLE 4	: https://drive.google.com/file/d/10FwpkyIXh4Pt7cP3ULds4N4dm9_2zZwr/view
+    - Feedback Form DP 2.1 16-04-2023 TLE 4: https://forms.gle/VrDYw4HW5E37gecFA
+    - Lecture Slides DP 2.2 18-04-2023 TLE 4	: https://drive.google.com/file/d/1utKvMRTLNrL00--xdMePKXA2Pdns2Soa/view
+    - Feedback Form DP 2.2 18-04-2023 TLE 4	: https://forms.gle/rfPy7kGfzThSoXog8
+    - Lecture Slides DP 2.3  21-04-2023 TLE 4 : https://drive.google.com/file/d/1GlZxCYD0Si9MnBSkyQtU-prcyvkuc45N/view
+    - Feedback Form DP 2.3 21-04-2023 TLE 4: https://forms.gle/YaTzzVdAHStNPDbw7
+Tasks:
+    - Task 1: https://codeforces.com/problemset/problem/1389/B
+    - Task 2: https://codeforces.com/problemset/problem/1249/E
+    - Task 3: https://codeforces.com/contest/1151/problem/B
+    - Task 4: https://codeforces.com/problemset/problem/1498/C
+    - Task 5: https://codeforces.com/problemset/problem/1625/C
+    - Task 6: https://codeforces.com/problemset/problem/1392/D
+    - Task 7: https://codeforces.com/problemset/problem/1077/F1
+    - Task 8: https://atcoder.jp/contests/dp/tasks/dp_n
+    - Task 9: https://codingcompetitions.withgoogle.com/kickstart/round/00000000008cb33e/00000000009e762e
+    - Task 10: https://codeforces.com/problemset/problem/1360/F
+
+Section: DP Advanced
+Resources:
+    - Lecture Slides DP 3.1  24-04-2023 TLE 4 : https://drive.google.com/file/d/1N4TGvX_KNPvznHT25tMrl0qchzn0g-pe/view
+    - Feedback Form DP 3.1 24-04-2023 TLE 4: https://forms.gle/8jRK5Pb5fnrtNMLL7
+    - Lecture slides Bitmask DP 3.2 25-04-2023 TLE 4: https://drive.google.com/file/d/18BAaauVwHRb7vprxGkJpDdgmX-2iZhC5/view
+    - Feedback Form Bitmask DP 3.2 25-04-2023 TLE 4: https://forms.gle/2tstenk7AKRnPSfH7
+Tasks:
+    - Task 2: https://cses.fi/problemset/task/1140
+    - Task 3: https://leetcode.com/problems/minimum-xor-sum-of-two-arrays/
+    - Task 4: https://www.codechef.com/problems/TSHIRTS
+    - Task 5: https://atcoder.jp/contests/dp/tasks/dp_o
+    - Task 6: https://cses.fi/problemset/task/1653
+    - Task 7: https://codeforces.com/problemset/problem/895/C
+    - Task 8: https://www.spoj.com/problems/COURIER/
+    - Task 9: https://codeforces.com/contest/580/problem/D
+    - Task 10: https://www.spoj.com/problems/ASSIGN/
+
+Section: Range Queries Beginner
+Resources:
+    - Feedback Form Segment Trees 30-04-2023 TLE 4: https://forms.gle/qdit2yYdggLEaTKF7
+    - Feedback Form Range Queries 2 03-05-2023 : https://forms.gle/J38XnnJqRdeyyQfk9
+    - Lecture slides  Segment Trees 30-04-2023 TLE 4: https://drive.google.com/file/d/1LKwOwkzUHtVqUbz39WbompLbu9LXD3cZ/view
+    - Lecture slides Range Queries 2 03-05-2023: https://drive.google.com/file/d/1Pp812umcLINaxfY70xnhFv2xkfGbrTfW/view
+Tasks:
+    - Task 1: https://codeforces.com/edu/course/2/lesson/4/1/practice/contest/273169/problem/A
+    - Task 2: https://codeforces.com/edu/course/2/lesson/4/1/practice/contest/273169/problem/B
+    - Task 3: https://codeforces.com/edu/course/2/lesson/4/1/practice/contest/273169/problem/C
+    - Task 4: https://codeforces.com/edu/course/2/lesson/4/2/practice/contest/273278/problem/A
+    - Task 5: https://codeforces.com/edu/course/2/lesson/4/2/practice/contest/273278/problem/B
+    - Task 6: https://codeforces.com/edu/course/2/lesson/4/2/practice/contest/273278/problem/D
+    - Task 7: https://codeforces.com/contest/339/problem/D
+    - Task 8: https://codeforces.com/contest/380/problem/C
+    - Task 9: https://codeforces.com/edu/course/2/lesson/5/2/practice/contest/279653/problem/A
+    - Task 10: https://codeforces.com/edu/course/2/lesson/5/2/practice/contest/279653/problem/B
+    - Task 11: https://codeforces.com/edu/course/2/lesson/5/2/practice/contest/279653/problem/C
+    - Task 12: https://codeforces.com/contest/52/problem/C
+    - Task 13: https://codeforces.com/edu/course/2/lesson/4/3/practice/contest/274545/problem/C
+    - Task 14: https://codeforces.com/contest/242/problem/E
+    - Task 15: https://cses.fi/problemset/task/2422
+    - Task 16: https://codeforces.com/problemset/problem/578/C
+
+Section: Range Queries Intermediate
+Resources:
+    - Lecture slides Fenwick Trees+ Sparse Table: https://drive.google.com/file/d/1obdwS0Us9VdnoyzrBA9O6_28kcem2TQo/view
+    - Feedback Form Generic Segment Trees  20-05-2023 : https://forms.gle/Rc5mB8NfKwjsnjHD8
+    - Generic Segment Tree with Lazy Propogation: https://github.com/Priyansh19077/CP-Templates/blob/master/Range%20Queries/Lazy_SGT.cpp
+    - Generic Segment Tree: https://github.com/Priyansh19077/CP-Templates/blob/master/Range%20Queries/Segment_tree.cpp
+Tasks:
+    - Task 1: https://cses.fi/problemset/task/1648
+    - Task 2: https://codeforces.com/problemset/problem/1709/D
+    - Task 3: https://codeforces.com/contest/597/problem/C
+    - Task 4: https://codeforces.com/problemset/problem/704/A
+    - Task 5: https://codeforces.com/contest/863/problem/E
+    - Task 6: https://codeforces.com/contest/276/problem/C
+    - Task 7: https://codeforces.com/contest/669/problem/E
+    - Task 8: https://codeforces.com/problemset/problem/514/D
+    - Task 9: https://codeforces.com/contest/5/problem/C
+    - Task 10: https://codeforces.com/contest/482/problem/B
+
+Section: Trees Beginner
+Resources:
+    - Lecture Slides Trees 1 (Introduction): https://drive.google.com/file/d/1qwEjWvfP-talBIJHDtVmHl-AJ73_R3bC/view
+    - Feedback Form Trees 1 (Introduction): https://forms.gle/vPfhHGBWGnqBzwWV6
+    - Lecture slides Trees 2 (Binary Lifting & Euler Tour): https://drive.google.com/file/d/172dR1yuinq5JygH1-7dyuFlYPLqgXSvJ/view
+Tasks:
+    - Task 1: https://codeforces.com/problemset/problem/580/C
+    - Task 2: https://codeforces.com/problemset/problem/1336/A
+    - Task 3: https://codeforces.com/problemset/problem/1388/C
+    - Task 4: https://cses.fi/problemset/task/1131
+    - Task 5: https://codeforces.com/problemset/problem/1593/E
+    - Task 6: https://codeforces.com/problemset/problem/1143/C
+    - Task 7: https://codeforces.com/problemset/problem/369/C
+    - Task 8: https://codeforces.com/problemset/problem/780/C
+    - Task 9: https://codeforces.com/problemset/problem/930/A
+    - Task 10: https://codeforces.com/problemset/problem/1037/D
+
+Section: Trees Advanced
+Resources:
+    - Lecture slides Trees 3 (Euler Tour) 28-05-2023 TLE: https://drive.google.com/file/d/1S8CtGNKgQCcMDaIBqS10XNC_-BSn_p_O/view
+    - Feedback Form Trees 3 (Euler Tour) 28-05-2023 TLE: https://forms.gle/JAv4ZDkpFJPHXpQH9
+    - Lecture slides Trees 4 (DP on trees) 01-06-2023 : https://drive.google.com/file/d/1C8Sz3t5ynSjwGp0qFS5Nh2z_zbqBOeh9/view
+Tasks:
+    - Task 1: https://cses.fi/problemset/task/1687
+    - Task 2: https://cses.fi/problemset/task/1688
+    - Task 3: https://cses.fi/problemset/task/1135
+    - Task 4: https://cses.fi/problemset/task/1136
+    - Task 5: https://codeforces.com/problemset/problem/191/C
+    - Task 6: https://codeforces.com/contest/1294/problem/F
+    - Task 7: https://codeforces.com/contest/1324/problem/F
+    - Task 8: https://codeforces.com/problemset/problem/1092/F
+    - Task 9: https://codeforces.com/problemset/problem/685/B
+    - Task 10: https://codeforces.com/problemset/problem/1746/D
